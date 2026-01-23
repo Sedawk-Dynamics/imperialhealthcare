@@ -50,6 +50,11 @@ import { AnimatedCTAText } from "@/components/animated-cta-text"
 import { ServicesCarousel } from "@/components/services-carousel"
 import RCMAuditModal from "@/components/rcm-audit-modal"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import Lottie from "lottie-react"
+import chatbotAnim from "@/public/animations/live-chatbot.json"
+import doctorAnim from "@/public/animations/doctor.json"
+import { motion } from "framer-motion"
+
 
 export default function Home() {
   // Changed from HomePage to LandingPage to match original
@@ -637,6 +642,18 @@ yPos += logoHeight + 12
             </div>
           </div>
         </div>
+        {/* 🤖 AI Chatbot Animation */}
+<motion.div
+  className="absolute right-6 bottom-24 hidden lg:block w-[280px] pointer-events-none z-0"
+  animate={{ y: [0, -24, 0] }}
+  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+>
+  <div className="relative">
+    {/* Glow */}
+    <div className="absolute inset-0 bg-brand-blue/20 blur-3xl rounded-full" />
+    <Lottie animationData={chatbotAnim} loop />
+  </div>
+</motion.div>
       </section>
 
       {/* 2. The Imperial Promise */}
@@ -744,7 +761,7 @@ yPos += logoHeight + 12
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground max-w-4xl mx-auto leading-tight">
               <span className="text-brand-orange">The Invisible Tax</span>: Why US Healthcare Providers Lose Up to
-              <span className="text-brand-orange font-bold">30%</span> of Contracted Revenue.
+              <span className="text-brand-orange font-bold"> 30%</span> of Contracted Revenue.
             </h3>
           </div>
 
