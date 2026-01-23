@@ -29,7 +29,7 @@ export function SiteFooter() {
                 ["Services", "/services"],
                 ["Why IHS", "/solutions"],
                 ["Solutions","/solutions"],
-                ["Technology & Security", "/about#technology"],
+                ["Technology & Security", "#footer1"],
                 ["Contact Us", "/#contact"],
               ].map(([label, href]) => (
                 <li key={label}>

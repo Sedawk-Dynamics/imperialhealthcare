@@ -49,6 +49,7 @@ import { PerformanceLedgerCarousel } from "@/components/performance-ledger-carou
 import { AnimatedCTAText } from "@/components/animated-cta-text"
 import { ServicesCarousel } from "@/components/services-carousel"
 import RCMAuditModal from "@/components/rcm-audit-modal"
+import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export default function Home() {
   // Changed from HomePage to LandingPage to match original
@@ -639,6 +640,7 @@ yPos += logoHeight + 12
       </section>
 
       {/* 2. The Imperial Promise */}
+      <ScrollReveal>
       <section className="py-24 bg-gradient-to-br from-brand-blue via-brand-blue/90 to-brand-blue/80 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto text-center mb-16">
@@ -725,8 +727,10 @@ yPos += logoHeight + 12
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* THE PROBLEM Section */}
+      <ScrollReveal>
       <section className="py-24 bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100">
         <div className="container mx-auto px-4">
           {/* Section Headline */}
@@ -900,10 +904,12 @@ yPos += logoHeight + 12
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 3. The Solution Section */}
 
       {/* 4. THE SOLUTION (IRRF) */}
+      <ScrollReveal>
       <section className="py-24 bg-gradient-to-br from-blue-50 via-white to-slate-50">
         <div className="container mx-auto px-4">
           {/* Headline */}
@@ -1290,6 +1296,7 @@ yPos += logoHeight + 12
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 5. IHS Advantage Section - NEW */}
       {/* <section className="py-24 bg-white">
@@ -1384,6 +1391,7 @@ yPos += logoHeight + 12
       </section> */}
 
       {/* 6. THE IHS ADVANTAGE */}
+      <ScrollReveal>
       <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -1495,8 +1503,10 @@ yPos += logoHeight + 12
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 7. Revenue Leakage Calculator */}
+      <ScrollReveal>
       <section id="calculator" className="py-16 bg-gradient-to-br from-gray-50 via-blue-50/30 to-orange-50/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
@@ -1850,10 +1860,12 @@ yPos += logoHeight + 12
           </Card>
         </div>
       </section>
+      </ScrollReveal>
 
       <ServicesCarousel />
 
       {/* 15. The Performance Ledger */}
+      <ScrollReveal>
       <section className="py-24 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
@@ -1876,6 +1888,7 @@ yPos += logoHeight + 12
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 8. Why Choose IHS Section */}
       {/* <section className="py-24 bg-white">
@@ -1970,6 +1983,7 @@ yPos += logoHeight + 12
       </section> */}
 
       {/* 9. IHS Standards vs Traditional RCM Providers */}
+      <ScrollReveal>
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -2018,8 +2032,10 @@ yPos += logoHeight + 12
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 13. Industries We Serve */}
+      <ScrollReveal>
       <section className="py-24 bg-gradient-to-br from-brand-blue/5 to-brand-orange/5">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -2074,8 +2090,10 @@ yPos += logoHeight + 12
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 11. Proven Success Stories */}
+      <ScrollReveal>
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -2207,9 +2225,11 @@ yPos += logoHeight + 12
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 14. Technology & Security */}
-      <section className="py-24 bg-white">
+      <ScrollReveal>
+      <section id="footer1" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -2270,8 +2290,10 @@ yPos += logoHeight + 12
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* THE IMPERIAL TRANSITION FRAMEWORK */}
+      <ScrollReveal>
       <section className="py-24 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -2291,8 +2313,10 @@ yPos += logoHeight + 12
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 10. Flexible Pricing Plans */}
+      <ScrollReveal>
       <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -2427,10 +2451,12 @@ yPos += logoHeight + 12
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* 12. Results you have never seen before! */}
 
       {/* THE IMPERIAL JOURNEY */}
+      <ScrollReveal>
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
@@ -2453,8 +2479,10 @@ yPos += logoHeight + 12
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       {/* comprehensive Contact section */}
+      <ScrollReveal>
       <section id="contact" className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -2616,6 +2644,7 @@ yPos += logoHeight + 12
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
       <SiteFooter />
 
