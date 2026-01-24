@@ -2567,7 +2567,7 @@ yPos += logoHeight + 12
                             India - Imperial Healthcare Systems Pvt. Ltd.
                           </p>
                           <p className="text-sm text-muted-foreground">
-                            <strong>Registered Office:</strong>
+                            <strong>Administrative Office:</strong>
                             <br />
                             Unit No. 219 2F, ILD Trade Centre,
                             <br />
@@ -2577,13 +2577,13 @@ yPos += logoHeight + 12
                           </p>
 
                           <p className="text-sm text-muted-foreground mt-2">
-                            <strong>Administrative Office:</strong>
+                            <strong>Office:</strong>
                             <br />
-                            Unit No. 219 2F, ILD Trade Centre,
+                            M15, Ground Floor, Regus,
                             <br />
-                            Sector 47, Sohna Road,
+                            Welldone Tech Park, Badshahpur–Sohna Road Highway,
                             <br />
-                            Gurugram - 122018, Haryana, India
+                            Sector 48, Gurugram – 122018, Haryana, India
                           </p>
                         </div>
                       </div>
