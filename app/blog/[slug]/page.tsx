@@ -1,4 +1,6 @@
 import { notFound } from "next/navigation"
+import SiteHeader from "@/components/site-header"
+import SiteFooter from "@/components/site-footer"
 
 export const dynamic = "force-dynamic"
 
@@ -37,15 +39,44 @@ export default async function BlogPost({ params }: PageProps) {
     if (!post) return notFound()
 
     return (
-      <main className="container mx-auto pt-32 pb-16">
-        <h1 className="text-4xl font-bold mb-6">{post.title}</h1>
+  <>
+    <SiteHeader />
 
-        <div
-          className="prose max-w-none"
+    <main className="min-h-screen pt-32 pb-20">
+      <div className="container mx-auto max-w-4xl px-4">
+
+        {/* Title */}
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          {post.title}
+        </h1>
+
+        {/* Meta */}
+        <p className="text-muted-foreground mb-10">
+          Published on{" "}
+          {new Date(post.published_at).toLocaleDateString()}
+        </p>
+
+        {/* Feature Image */}
+        {post.feature_image && (
+          <img
+            src={post.feature_image}
+            alt={post.title}
+            className="rounded-xl mb-10 w-full object-cover"
+          />
+        )}
+
+        {/* Content */}
+        <article
+          className="prose prose-lg max-w-none"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
-      </main>
-    )
+
+      </div>
+    </main>
+
+    <SiteFooter />
+  </>
+)
   } catch (error) {
     console.error("Ghost fetch crashed:", error)
     return notFound()
