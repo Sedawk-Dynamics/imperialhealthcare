@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { Instagram, Linkedin, X, Facebook } from "lucide-react"
 
 export function SiteFooter() {
   return (
@@ -18,6 +19,61 @@ export function SiteFooter() {
               Think Excellence. Delivering technology-enabled healthcare solutions with integrity, accountability, and
               reliability.
             </p>
+            {/* Social Media Icons */}
+<div className="flex gap-4 mt-5">
+
+  <a
+    href="https://www.instagram.com/imperial_health_systems/"
+    target="_blank"
+    aria-label="Instagram"
+  >
+    <img
+    src="/images/Instagram_Glyph_Gradient.png"
+    alt="X"
+    className="w-6 h-6"
+  />
+  </a>
+
+  <a
+    href="https://www.linkedin.com/company/imperial-healthcare-systems"
+    target="_blank"
+    aria-label="LinkedIn"
+  >
+    <img
+    src="/images/LI-In-Bug.png"
+    alt="X"
+    className="w-7 h-6"
+  />
+  </a>
+
+  <a
+  href="https://x.com/Imperialhealth_"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img
+    src="/images/logo-black.png"
+    alt="X"
+    className="w-6 h-6"
+  />
+</a>
+
+
+  <a
+    href="https://www.facebook.com/Imperialhealthsystems/"
+    target="_blank"
+    aria-label="Facebook"
+  >
+    <img
+    src="/images/Facebook_Logo_Primary.png"
+    alt="X"
+    className="w-7 h-7"
+  />
+  </a>
+
+</div>
+
+
           </div>
 
           <div>
