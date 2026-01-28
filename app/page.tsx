@@ -40,7 +40,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
-import { FloatingChatbot } from "@/components/floating-chatbot"
 import ContactFormModal from "@/components/contact-form-modal"
 import { SequentialHeroAnimation } from "@/components/sequential-hero-animation"
 import { ImperialJourneyMap } from "@/components/imperial-journey-map"
@@ -2665,7 +2664,6 @@ yPos += logoHeight + 12
 
       <SiteFooter />
 
-      <FloatingChatbot onOpenContactModal={() => setContactModalOpen(true)} />
 
       <RCMAuditModal isOpen={isRCMAuditModalOpen} onClose={() => setIsRCMAuditModalOpen(false)} />
       <ContactFormModal
