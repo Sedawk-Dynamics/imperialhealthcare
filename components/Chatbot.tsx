@@ -3,53 +3,110 @@
 import { useState } from "react"
 import { MessageCircle, X, Send } from "lucide-react"
 
+const CONTACT_DETAILS = {
+  phone: "+1 (859) 555-0199", // replace if needed
+  email: "info@imperialhealthsystems.com",
+  contactForm: "https://www.imperialhealthsystems.com/contact",
+}
+
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false)
   const [messages, setMessages] = useState([
     {
       role: "assistant",
       content:
-        "👋 Hello, I’m **Imperia.ai** — your healthcare business assistant. How can I assist you today?",
+        "👋 Hello, I’m *Imperia.ai* — your healthcare business assistant. How can I assist you today?",
     },
   ])
   const [input, setInput] = useState("")
   const [loading, setLoading] = useState(false)
 
+  const isContactIntent = (message: string) => {
+  const keywords = [
+    "contact",
+    "connect",
+    "talk to team",
+    "sales",
+    "consultation",
+    "call",
+    "email",
+    "reach out",
+    "get in touch",
+  ]
+
+  return keywords.some((k) =>
+    message.toLowerCase().includes(k)
+  )
+}
+
   const sendMessage = async () => {
-    if (!input.trim()) return
+  if (!input.trim()) return
 
-    const userMessage = { role: "user", content: input }
-    setMessages((prev) => [...prev, userMessage])
-    setInput("")
-    setLoading(true)
+  const userMessage = { role: "user", content: input }
+  setMessages((prev) => [...prev, userMessage])
+  setInput("")
 
-    try {
-      const res = await fetch("/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: input }),
-      })
+  // ✅ STEP 2: HANDLE CONTACT REQUEST LOCALLY
+  if (isContactIntent(input)) {
+    setMessages((prev) => [
+      ...prev,
+      {
+        role: "assistant",
+        content: `
+          <strong>I'd be happy to connect you with the Imperial Healthcare Systems team.</strong><br/><br/>
+          Please choose one of the options below:
+          <div class="mt-3 space-y-2">
+            <a href="tel:${CONTACT_DETAILS.phone}"
+               class="block rounded-lg bg-blue-600 px-4 py-2 text-white text-sm text-center">
+              📞 Call Us
+            </a>
+            <a href="mailto:${CONTACT_DETAILS.email}"
+               class="block rounded-lg bg-indigo-600 px-4 py-2 text-white text-sm text-center">
+              📧 Email Us
+            </a>
+            <a href="${CONTACT_DETAILS.contactForm}"
+               target="_blank"
+               class="block rounded-lg bg-gray-900 px-4 py-2 text-white text-sm text-center">
+              🌐 Contact Form
+            </a>
+          </div>
+        `,
+      },
+    ])
+    return // ⛔ DO NOT CALL API
+  }
 
-      const data = await res.json()
+  // ⬇️ NORMAL AI FLOW
+  setLoading(true)
 
-      const botMessage = {
+  try {
+    const res = await fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: input }),
+    })
+
+    const data = await res.json()
+
+    setMessages((prev) => [
+      ...prev,
+      {
         role: "assistant",
         content: data.reply || "⚠️ Unable to respond right now.",
-      }
-
-      setMessages((prev) => [...prev, botMessage])
-    } catch (error) {
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "assistant",
-          content: "⚠️ AI service temporarily unavailable.",
-        },
-      ])
-    } finally {
-      setLoading(false)
-    }
+      },
+    ])
+  } catch {
+    setMessages((prev) => [
+      ...prev,
+      {
+        role: "assistant",
+        content: "⚠️ AI service temporarily unavailable.",
+      },
+    ])
+  } finally {
+    setLoading(false)
   }
+}
 
   return (
     <>
