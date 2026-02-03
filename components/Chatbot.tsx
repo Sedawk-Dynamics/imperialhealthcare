@@ -138,10 +138,10 @@ export default function Chatbot() {
           <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white">
 
   {/* Torch Logo */}
-  <div className="h-15 w-15 object-contain drop-shadow-[0_0_6px_rgba(255,255,255,0.45)]"
+  <div className="h-15 w-15 object-contain "
 >
     <img
-      src="/images/icon.png"
+      src="/images/White_torch_logo.png"
       alt="Imperial Healthcare Systems"
       className="h-15 w-15 object-contain"
     />
