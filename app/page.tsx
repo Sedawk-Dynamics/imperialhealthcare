@@ -2663,7 +2663,9 @@ yPos += logoHeight + 12
                     Download Company Profile
                     <Download className="ml-2 h-5 w-5" />
                   </Button>
-
+                    <p>
+                      By providing Submit, you authorize Imperial Healthcare Systems to collect your info and contact you via email, phone, or SMS. Message frequency may varies, Message data rates may apply, and you can opt-out by replying STOP or texting HELP. You may receive communications such as patient appointment scheduling, confirmations, patient health information, emergency/routine follow-up communications, and other healthcare-related information, but not for marketing or promotional purposes of our services. We also understand and comply with protected health information (PHI) in accordance with HIPAA regulations. See our Privacy Policy and Terms and Conditions for more details.
+                    </p>
                   </div>
                 </div>
               </CardContent>
