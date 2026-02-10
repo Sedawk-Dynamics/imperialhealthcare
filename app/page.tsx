@@ -454,7 +454,7 @@ yPos += logoHeight + 12
       doc.setFont(undefined, "normal")
       doc.setTextColor(60)
       doc.text(
-        "Email: info@imperialhealthsystems.com  |  Phone: US +1-XXX-XXX-XXXX  •  India +91-XXXXXXXXXX",
+        "Email: info@imperialhealthsystems.com  |  Phone: US +1 (859) 978-8780  •  India +91 99537 48055",
         pageWidth / 2,
         y,
         { align: "center" },
