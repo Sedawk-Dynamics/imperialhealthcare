@@ -2544,8 +2544,8 @@ yPos += logoHeight + 12
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Phone</h3>
-                        <p className="text-muted-foreground">US: +1-XXX-XXX-XXXX</p>
-                        <p className="text-muted-foreground">India: +91-XXXXXXXXXX</p>
+                        <p className="text-muted-foreground">US: +1 (859) 978-8780</p>
+                        <p className="text-muted-foreground">India: +91 99537 48055</p>
                       </div>
                     </div>
 
